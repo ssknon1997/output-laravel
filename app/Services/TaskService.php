@@ -1,0 +1,24 @@
+<?php
+
+namespace App\Services;
+
+use App\Models\Task;
+
+class TaskService
+{
+    public function create(array $data)
+    {
+        return Task::create($data);
+    }
+
+    public function Update(Task $task, array $data)
+    {
+        $task->update($data);
+        return $task;
+    }
+
+    public function delete(Task $task)
+    {
+        return $task->delete();
+    }
+}
